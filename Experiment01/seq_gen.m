@@ -36,6 +36,15 @@ elseif (type_of_sqn==5)
     for ii = 1:1:length(n)
             digital_sqn(ii) = Amp*sin(2*pi*(M/N)*n(ii)) 
     end
+    
+    elseif(type_of_sqn==8)
+    for ii=1:1:length(n)
+        if(n(ii)==0)
+           digital_sqn(ii)=Amp*M; 
+        else
+          digital_sqn(ii)=Amp*M*sin(2*pi*(M/N)*n(ii))/(2*pi*(M/N)*n(ii)); 
+        end
+    end
  elseif(type_of_sqn==9)
     for ii=1:1:length(n)
         if(n(ii)<-N/2)

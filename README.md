@@ -10,7 +10,6 @@ Welcome to the GitHub repository for ECE307 - Digital Signal Processing and Appl
 2. [Prerequisites](#prerequisites)
 3. [Usage](#usage)
 4. [Contributing](#contributing)
-5. [License](#license)
 
 ## About
 
@@ -31,7 +30,7 @@ Open MATLAB and navigate to the cloned directory.
 
 Execute the desired MATLAB script using the provided functions.
 
-Contributing
+## Contributing
 If you would like to contribute to this project, please follow these guidelines:
 
 Fork the repository.

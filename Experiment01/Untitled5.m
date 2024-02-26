@@ -3,6 +3,7 @@ clear all
 close all
 
 n = -60:1:60;
+% seq_gen(n,type_of_sqn,alpha,Amp,M,N)
 [digital_sqn_1] = seq_gen(n, 1, 1, 1, 1, 1);    % Impulse sequence
 [digital_sqn_2] = seq_gen(n, 2, 1, 1, 1, 1);    % Unit Step sequence
 [digital_sqn_3] = seq_gen(n, 3, 0.7, 1, 1, 1);  % Exponential Decay sequence
@@ -51,6 +52,12 @@ stem(n, digital_sqn_7);
 xlabel("n");
 ylabel("x[n]");
 title("Sinc Sequence");
+
+figure;
+stem(n, digital_sqn_4.*digital_sqn_6);
+xlabel("n");
+ylabel("x[n]");
+title("COS*GATE Sequence");
 
 % Create a 3D plot with n, sin(n), and cos(n)
 figure;

@@ -5,17 +5,18 @@ close all
 n=-100:1:100;
 len_n=length(n);
 type_of_sqn_1=3;
-type_of_sqn_2=2;
-alpha=0.7;
+type_of_sqn_2=3;
+alpha1=0.5;
+alpha2=0.7;
 TR=0;
 M=1;
 N=1;
 Amp=1;
 
 [seq1] = sqn_gen_1(n, type_of_sqn_1,...
-    alpha, Amp, M, N);
+    alpha1, Amp, M, N);
 [seq2] = sqn_gen_1(n, type_of_sqn_2,...
-    alpha, Amp, M, N);
+    alpha2, Amp, M, N);
 
 [fliped_seq, TR] = flip_sqn(len_n, seq2, TR);
 

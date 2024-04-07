@@ -1,0 +1,66 @@
+clc
+clear all
+close all
+type_of_sqn=5;
+n=-100:1:100;
+alpha=0.7;
+A=1;
+M=1;
+N=8;
+TR=0;
+[x_n] = sqn_gen_1(n, type_of_sqn,...
+    alpha, A, M, N);
+
+subplot(4,1,1), stem(n, x_n)
+ylabel("x[n]");
+xlabel("n");
+[X_omega,omega_x] = DTFT_x1(n, x_n);
+
+%---------Partical Values-----------------------
+X_omega_mag=abs(X_omega);
+X_omega_angle=atan(imag(X_omega)./real(X_omega));
+
+%------Theoratical values------------------------
+for ii=1:length(omega_x)
+    
+%      X_omega_th_mag(ii,1)=1;
+%     X_omega_th_angle(ii,1)=0;
+%     X_omega_th_mag(ii,1)=1/sqrt(1+alpha^(2)-2*alpha*...
+%         cos(omega_x(ii)));
+%     X_omega_th_angle(ii,1)=-1*atan(alpha*sin(omega_x(ii))...
+%         /(1-alpha*cos(omega_x(ii))));
+    X_omega_th_mag(ii,1)=sin((N+1/2)*(omega_x(ii)))/...
+        sin(omega_x(ii)/2);
+    X_omega_th_angle(ii,1)=0;
+end
+
+subplot(4,1,2), plot(omega_x/pi, X_omega_mag, ...
+    omega_x/pi, X_omega_th_mag, '--k')
+ylabel("|X(\omega)|");
+xlabel("\omega");
+
+subplot(4,1,3), plot(omega_x/pi, X_omega_angle, ...
+    omega_x/pi, X_omega_th_angle, '--k')
+ylabel("\angleX(\omega)");
+xlabel("\omega");
+
+% step_size_x=abs(omega_x(1)- omega_x(2));
+% for iii=1:length(n) 
+%     expo_x(iii,:)=exp(1j*n(iii).*omega_x);
+%     temp1=expo_x(iii,:).*X_omega;
+%     x_n_2(1,iii) = (1/(2*pi))*my_int_fun(temp1, step_size_x);
+% end
+
+[x_n_2] = IDTFT_x(X_omega, omega_x, n);
+subplot(4,1,4), stem(n, (x_n_2))
+
+
+
+
+
+
+
+
+
+
+

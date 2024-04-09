@@ -10,7 +10,7 @@ N1=8;
 N2=4;
 TR=0;
 [x_1_n] = sqn_gen_1(n, 1, alpha, A, M, N1);
-[energy_sqn] = energy_sqn(x_1_n);
+[energy_sqn] = nrgxn(x_1_n);
 
 [X_1_omega,omega_x] = DTFT_x1(n, x_1_n);
 datax_1=abs(X_1_omega);

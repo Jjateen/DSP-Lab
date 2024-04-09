@@ -1,4 +1,4 @@
-function [energy_sqn] = energy_sqn(sqn)
+function [energy_sqn] = nrgxn(sqn)
 %Energy of the sqn
 
 energy_sqn = sum(abs(sqn).^2);

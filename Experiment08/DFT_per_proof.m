@@ -2,7 +2,7 @@ clc
 clear all
 close all
 
-N = 16;
+N = 50;
 n = 0:1:N-1;
 k = 0:1:N-1;
 [x_n] = zeros(1,N);
@@ -28,7 +28,7 @@ subplot(4,1,2),stem(k,X_mag,'k');
 xlabel("k");
 ylabel("|X(k)|");
 
-subplot(4,1,3),stem(k,X_ang,'g');
+subplot(4,1,3),stem(k,X_ang,'k');
 xlabel("k");
 ylabel("\angle X(k)");
 

@@ -1,15 +1,15 @@
 clc
 clear all
 close all
-n=-100:1:100;
+n=-20:1:20;
 len_n=length(n);
 
 %Generating sequences
 [delta] = sqn_gen_1(n, 1, 0, 0, 0, 0);
 [exp_rhs] = sqn_gen_1(n, 3, 0.9, 0, 0, 0);
 [exp_dual] = sqn_gen_1(n, 8, 0.9, 0, 0, 0);
-[gate] = sqn_gen_1(n, 6, 0, 0, 0, 50);
-[sinc] = sqn_gen_1(n, 7, 0, 0, 0, 20);
+[gate] = sqn_gen_1(n, 6, 0, 0, 0, 10);
+[sinc] = sqn_gen_1(n, 7, 0, 0, 0, 4);
 
 %Generating their DTFTs
 [D,omega_d] = DTFT_x1(n, delta);
@@ -46,7 +46,7 @@ table_data = {
     'dual sided exponential', energy_ed, energy_ED;
     'gate', energy_g, energy_G;
     'sinc', energy_s, energy_S
-};
+};   
 
 % Display table
 f = figure;

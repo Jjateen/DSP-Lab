@@ -3,11 +3,11 @@ clear all
 close all
 n=-50:1:50;
 type_of_sqn=6;
-alpha=0.9;
+alpha=0.7;
 Amp=1;
 M=1;
-N1=6;
-N2=3;
+N1=12;
+N2=6;
 
 % g_1_n=sqn_gen_1(n, 6, alpha, Amp, M, N1);
 % g_2_n=sqn_gen_1(n, 6, alpha, Amp, M, N2);

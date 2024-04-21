@@ -81,7 +81,8 @@ xlabel("\omega");
 
 [x_n_2] = IDTFT_x(X_omega, omega_x, n);
 subplot(4,1,4), stem(n, (x_n_2))
-
+ylabel("x[n]_rec");
+xlabel("n");
 
 
 figure, plot(omega_x/pi, X_omega_mag)

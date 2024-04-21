@@ -28,7 +28,7 @@ subplot(4,1,2),stem(k,X_mag,'k');
 xlabel("k");
 ylabel("|X(k)|");
 
-subplot(4,1,3),stem(k,X_ang,'g');
+subplot(4,1,3),stem(k,X_ang,'k');
 xlabel("k");
 ylabel("\angle X(k)");
 

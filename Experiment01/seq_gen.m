@@ -1,5 +1,4 @@
-function [digital_sqn] = sqn_gen_1(n, type_of_sqn,...
-    alpha, Amp, M, N)
+function [digital_sqn] = sqn_gen_1(n, type_of_sqn, alpha, Amp, M, N)
 %code to genrate sqn
 %   Detailed explanation goes here
 

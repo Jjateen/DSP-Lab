@@ -9,7 +9,7 @@ alpha = 0.5;
 A = 1;
 M = 3;
 N1 = 16;
-[x_1_n] = sqn_gen_1(n, 7, alpha, A, M, N1);
+[x_1_n] = sqn_gen_1(n, 2, alpha, A, M, N1);
 subplot(4,1,1), stem(n, x_1_n);
 
 x_2_n = x_1_n.*n;

@@ -19,25 +19,9 @@ elseif(type_of_sqn==2)
             digital_sqn(ii)=0;
         end
     end
-elseif(type_of_sqn==22)
-    for ii=1:1:length(n)
-        if(n(ii)>=0)
-            digital_sqn(ii)=0;
-        else
-            digital_sqn(ii)=1;
-        end
-    end
 elseif(type_of_sqn==3)
     for ii=1:1:length(n)
         if(n(ii)>=0)
-            digital_sqn(ii)=alpha^n(ii);
-        else
-            digital_sqn(ii)=0;
-        end
-    end
-elseif(type_of_sqn==32)
-    for ii=1:1:length(n)
-        if(n(ii)<0)
             digital_sqn(ii)=alpha^n(ii);
         else
             digital_sqn(ii)=0;

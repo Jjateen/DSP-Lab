@@ -2,7 +2,7 @@ clc
 clear all
 close all
 
-N=8;
+N=32;
 n=0:1:N-1;
 k=0:1:N-1;
 

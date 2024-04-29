@@ -2,7 +2,7 @@ function [digital_sqn] = sqn_gen_1(n, type_of_sqn,...
     alpha, Amp, M, N)
 %code to genrate sqn
 %   Detailed explanation goes here
-
+[digital_sqn] = zeros(1,length(n));
 if(type_of_sqn==1)
     for ii=1:1:length(n)
         if(n(ii)==0)

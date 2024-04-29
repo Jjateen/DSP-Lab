@@ -1,6 +1,10 @@
-function [Xz] = zt(n, g_1_n)
+function [Xz] = zt(n, xn)
     re_z=-2:0.01:2;
     im_z=-2:0.01:2;
+    TR=0;
+    len_n = length(xn);
+    [fliped_seq, TR] = flip_sqn(len_n, xn, TR);
+    [g_1_n] = delay_sqn(fliped_seq, len_n, n, 0, TR);
     for ii=1:length(re_z)
         for jj=1:length(im_z)
             z_plan(ii,jj)=re_z(ii)+1j*im_z(jj);
@@ -23,7 +27,7 @@ function [Xz] = zt(n, g_1_n)
             Xz(ii,jj)=sum(abs(G_1_z(ii,jj,:)));
         end
     end
-    subplot(3,1,1), stem(n, g_1_n)
+    subplot(3,1,1), stem(n, xn)
     ylabel("x(n)");
     xlabel("n");
     subplot(3,1,2),surf(X, Y, 10*log10(Xz), 'linestyle','none');

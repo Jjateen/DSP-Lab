@@ -20,7 +20,7 @@ M=1;
 N1=6;
 N2=3;
 TR=0;
-[g_1_n] = sqn_gen_1(n, 1, alpha, A, M, N1);
+[g_1_n] = sqn_gen_1(n, 3, alpha, A, M, N1);
 [fliped_seq, TR] = flip_sqn(len_n, g_1_n, TR);
 [g_2_n] = delay_sqn(fliped_seq, len_n, n, 0, TR);
 

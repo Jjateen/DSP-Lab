@@ -20,12 +20,12 @@ M=1;
 N1=6;
 N2=3;
 TR=0;
-[g_1_n] = sqn_gen_1(n, 9, alpha, A, M, N1);
+[g_1_n] = sqn_gen_1(n, 3, alpha, A, M, N1);
 [fliped_seq, TR] = flip_sqn(len_n, g_1_n, TR);
 [g_2_n] = delay_sqn(fliped_seq, len_n, n, 0, TR);
 
 figure;
-subplot(2,2,1), stem(n, g_1_n)
+subplot(2,2,1), stem(n, g_2_n)
 ylabel("x(n)");
 xlabel("n");
 
@@ -50,7 +50,7 @@ ylabel("Image(z)");
 xlabel("Real(z)");
 subplot(2,2,3),mesh(X, Y, 10*log10(z_x));
 colorbar('Direction','reverse');
-% colormap(flag);
+colormap(jet);
 ylabel("Image(z)");
 xlabel("Real(z)");
 

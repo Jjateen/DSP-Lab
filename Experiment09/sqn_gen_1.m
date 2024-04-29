@@ -65,7 +65,7 @@ elseif(type_of_sqn==8)
 elseif(type_of_sqn==9)
     for ii=1:1:length(n)
         if(n(ii)<=0)
-            digital_sqn(ii)=alpha^(n(ii));
+            digital_sqn(ii)=-1*alpha^(n(ii));
         else
             digital_sqn(ii)=0;
         end

@@ -32,7 +32,7 @@ function [Xz] = zt(n, xn)
     xlabel("n");
     subplot(3,1,2),surf(X, Y, 10*log10(Xz), 'linestyle','none');
     colorbar('Direction','reverse')
-    colormap(jet);
+    colormap(flag);
     ylabel("Image(z)");
     xlabel("Real(z)");
     

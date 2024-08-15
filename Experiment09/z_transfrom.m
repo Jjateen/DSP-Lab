@@ -20,12 +20,11 @@ M=1;
 N1=6;
 N2=3;
 TR=0;
-[g_1_n] = sqn_gen_1(n, 9, alpha, A, M, N1);
+[g_1_n] = sqn_gen_1(n, 3, alpha, A, M, N1);
 [fliped_seq, TR] = flip_sqn(len_n, g_1_n, TR);
 [g_2_n] = delay_sqn(fliped_seq, len_n, n, 0, TR);
 
-figure;
-subplot(2,2,1), stem(n, g_1_n)
+subplot(3,1,1), stem(n, g_1_n)
 ylabel("x(n)");
 xlabel("n");
 
@@ -43,20 +42,16 @@ for ii=1:length(re_z)
     end
 end
 
-subplot(2,2,2),surf(X, Y, 10*log10(z_x),...
+subplot(3,1,2),surf(X, Y, 10*log10(z_x),...
     'linestyle','none');
 colorbar('Direction','reverse')
-ylabel("Image(z)");
-xlabel("Real(z)");
-subplot(2,2,3),mesh(X, Y, 10*log10(z_x));
-colorbar('Direction','reverse');
-% colormap(flag);
+colormap("jet");
 ylabel("Image(z)");
 xlabel("Real(z)");
 
-subplot(2,2,4),image( [re_z(1,1), re_z(1,end)],...
+subplot(3,1,3),image( [re_z(1,1), re_z(1,end)],...
     [im_z(1, end), im_z(1,1)] ,10*log10(z_x));
-colorbar('Direction','reverse');
+colorbar('Direction','reverse')
 ylabel("Image(z)");
 xlabel("Real(z)");
 
@@ -82,3 +77,14 @@ xlabel("Real(z)");
 
 % [x_n_2] = IDTFT_x(X_omega, omega_x, n);
 % subplot(4,1,4), stem(n, (x_n_2))
+
+
+
+
+
+
+
+
+
+
+
